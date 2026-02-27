@@ -17,3 +17,5 @@ if [ -f '/home/hage/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/home/h
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/hage/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/home/hage/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+. "$HOME/.local/share/../bin/env"
