@@ -1,0 +1,6 @@
+source ~/.config/zsh/exports
+source ~/.config/zsh/options
+source ~/.config/zsh/aliases
+source ~/.config/zsh/functions
+source ~/.config/zsh/init
+source ~/.config/zsh/plugins

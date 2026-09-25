@@ -1,0 +1,29 @@
+# Mise activation
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
+# Zoxide activation
+if command -v zoxide &> /dev/null; then
+  eval "$(zoxide init zsh)"
+fi
+
+# Try tool helper
+if command -v try &> /dev/null; then
+  try() {
+    unset -f try
+    eval "$(SHELL=/bin/zsh command try init ~/Work/tries)"
+    try "$@"
+  }
+fi
+
+# FZF keybindings & completion
+if command -v fzf &> /dev/null; then
+  [[ -f /usr/share/fzf/completion.zsh ]] && source /usr/share/fzf/completion.zsh
+  [[ -f /usr/share/fzf/key-bindings.zsh ]] && source /usr/share/fzf/key-bindings.zsh
+fi
+
+# Starship prompt
+if [[ ${TERM:-} != "dumb" ]] && command -v starship &> /dev/null; then
+  eval "$(starship init zsh)"
+fi

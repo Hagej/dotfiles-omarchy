@@ -1,0 +1,11 @@
+# Editor and terminal settings
+export SUDO_EDITOR="$EDITOR"
+export BAT_THEME="ansi"
+export MANROFFOPT="-c"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export COLORTERM="truecolor"
+
+# Omarchy and language paths
+export OMARCHY_PATH="$HOME/.local/share/omarchy"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$OMARCHY_PATH/bin:$BUN_INSTALL/bin:$HOME/.local/bin:$PATH"
